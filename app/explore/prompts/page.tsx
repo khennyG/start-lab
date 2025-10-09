@@ -1,16 +1,20 @@
 export default function PromptLibraryPage() {
   return (
-    <div className="max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold text-gray-800 mb-4">Prompt Library</h1>
-      <p className="text-gray-600 mb-6 text-sm leading-relaxed">Curated, faculty-tested prompt patterns you can adapt safely for teaching, assessment design, scaffolding, and feedback workflows.</p>
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {["Lesson Outline", "Rubric Draft", "Concept Breakdown", "Misconception Detector", "Case Scenario", "Formative Quiz"].map(p => (
-          <div key={p} className="p-4 rounded-lg border bg-white/70 backdrop-blur-sm shadow-sm">
-            <h2 className="font-semibold text-gray-800 text-sm mb-1">{p}</h2>
-            <p className="text-[11px] text-gray-600">Sample framework with role, objective, constraints, and output format.</p>
-            <button className="mt-2 text-[11px] text-red-600 hover:underline">View Pattern</button>
+    <div className="max-w-3xl mx-auto py-12 md:py-16 px-5">
+      <header className="text-center mb-10 md:mb-14">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">Prompt Library</h1>
+      </header>
+
+      <div className="max-w-2xl mx-auto">
+        <div className="rounded-2xl border border-gray-200 bg-gray-50 px-6 py-6 shadow-sm text-center">
+          <p className="text-sm md:text-base text-gray-700 mb-2">🚧 Coming Soon: This section is still under development.</p>
+          <p className="text-sm md:text-[15px] leading-relaxed text-gray-600">
+            This section will serve as a curated library of ready-to-use AI prompts tailored to teaching, assessment, and research across disciplines. Faculty will be able to explore categorized examples, copy editable templates, and adapt them for their own courses.
+          </p>
+          <div className="mt-6 pt-4 border-t">
+            <p className="text-xs text-gray-500">Stay tuned — this section will launch in the next phase of StartLab!</p>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
