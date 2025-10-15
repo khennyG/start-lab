@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import 'katex/dist/katex.min.css';
 import { InlineMath, BlockMath } from 'react-katex';
+import type { COSDiscipline } from '@/components/SectionFacultySubmissions';
+import SectionFacultySubmissions from '@/components/SectionFacultySubmissions';
 
 const ACCORDION_ITEMS = [
   'Redesign Assignments',
@@ -15,9 +17,9 @@ const ACCORDION_ITEMS = [
 
 export default function GettingStartedPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [selectedDiscipline, setSelectedDiscipline] = useState<string>('Mathematics');
+  const [selectedDiscipline, setSelectedDiscipline] = useState<COSDiscipline>('Mathematics');
 
-  const DISCIPLINES = [
+  const DISCIPLINES: COSDiscipline[] = [
     'Mathematics',
     'Biology',
     'Physics',
@@ -1434,6 +1436,18 @@ export default function GettingStartedPage() {
                           })}
                         </div>
                       </div>
+                      {/* Faculty Submissions – Redesign Assignments */}
+                      <SectionFacultySubmissions
+                        collectionName="redesignAssignments"
+                        selectedDiscipline={selectedDiscipline}
+                        submitButtonText="Submit a redesign"
+                        modalTitle="Submit an assignment redesign"
+                        oldLabel="Old Assignment"
+                        newLabel="Redesigned Assignment"
+                        titleLabel="Assignment Title"
+                        titlePlaceholder="e.g., Optimization Project"
+                      />
+
                       {/* Examples list */}
                       <div className="space-y-5">
                         <div className="h-px bg-gray-200" />
@@ -1530,6 +1544,18 @@ export default function GettingStartedPage() {
                           })}
                         </div>
                       </div>
+                      {/* Faculty Submissions – Lecture Notes */}
+                      <SectionFacultySubmissions
+                        collectionName="lectureNotes"
+                        selectedDiscipline={selectedDiscipline}
+                        submitButtonText="Submit a lecture redesign"
+                        modalTitle="Submit lecture notes redesign"
+                        oldLabel="Old Approach"
+                        newLabel="Reimagined Lecture"
+                        titleLabel="Lecture Title"
+                        titlePlaceholder="e.g., Limits and Continuity"
+                      />
+
                       {/* Examples list */}
                       <div className="space-y-5">
                         <div className="h-px bg-gray-200" />
@@ -1624,6 +1650,18 @@ export default function GettingStartedPage() {
                           })}
                         </div>
                       </div>
+                      {/* Faculty Submissions – Case Studies */}
+                      <SectionFacultySubmissions
+                        collectionName="caseStudies"
+                        selectedDiscipline={selectedDiscipline}
+                        submitButtonText="Submit a case study"
+                        modalTitle="Submit a case study redesign"
+                        oldLabel="Old Approach"
+                        newLabel="Reimagined Case"
+                        titleLabel="Case Title"
+                        titlePlaceholder="e.g., Gene Editing Ethics"
+                      />
+
                       {/* Examples list */}
                       <div className="space-y-5">
                         <div className="h-px bg-gray-200" />
@@ -1718,6 +1756,18 @@ export default function GettingStartedPage() {
                           })}
                         </div>
                       </div>
+                      {/* Faculty Submissions – Scaffold Student Work */}
+                      <SectionFacultySubmissions
+                        collectionName="scaffoldAssignments"
+                        selectedDiscipline={selectedDiscipline}
+                        submitButtonText="Submit a scaffolded redesign"
+                        modalTitle="Submit a scaffolded assignment redesign"
+                        oldLabel="Old Assignment"
+                        newLabel="Redesigned Scaffolded Assignment"
+                        titleLabel="Assignment Title"
+                        titlePlaceholder="e.g., Multi-step Proof"
+                      />
+
                       {/* Examples list */}
                       <div className="space-y-5">
                         <div className="h-px bg-gray-200" />
@@ -1808,6 +1858,18 @@ export default function GettingStartedPage() {
                           })}
                         </div>
                       </div>
+                      {/* Faculty Submissions – In-Class Activities */}
+                      <SectionFacultySubmissions
+                        collectionName="inClassActivities"
+                        selectedDiscipline={selectedDiscipline}
+                        submitButtonText="Submit an in-class activity"
+                        modalTitle="Submit an in-class activity redesign"
+                        oldLabel="Old Activity"
+                        newLabel="Redesigned Activity"
+                        titleLabel="Activity Title"
+                        titlePlaceholder="e.g., Concept Mapping Warm-Up"
+                      />
+
                       {/* Examples list */}
                       <div className="space-y-5">
                         <div className="h-px bg-gray-200" />
@@ -1898,6 +1960,18 @@ export default function GettingStartedPage() {
                           })}
                         </div>
                       </div>
+                      {/* Faculty Submissions – Feedback & Rubrics */}
+                      <SectionFacultySubmissions
+                        collectionName="feedbackRubrics"
+                        selectedDiscipline={selectedDiscipline}
+                        submitButtonText="Submit a feedback/rubric pattern"
+                        modalTitle="Submit a feedback & rubric approach"
+                        oldLabel="Old Activity"
+                        newLabel="AI-Enhanced Approach"
+                        titleLabel="Activity Title"
+                        titlePlaceholder="e.g., Lab Report Feedback"
+                      />
+
                       {/* Examples list */}
                       <div className="space-y-5">
                         <div className="h-px bg-gray-200" />
