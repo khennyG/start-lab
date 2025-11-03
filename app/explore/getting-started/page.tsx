@@ -1,5 +1,6 @@
 "use client";
 import { useState } from 'react';
+import Link from 'next/link';
 import 'katex/dist/katex.min.css';
 import { InlineMath, BlockMath } from 'react-katex';
 import type { COSDiscipline } from '@/components/SectionFacultySubmissions';
@@ -248,7 +249,7 @@ export default function GettingStartedPage() {
             <p className="mb-2">That induces <InlineMath math={'\\Delta y = \\cos(g) \\Delta g'} /> so combining both gives:</p>
           <BlockMath math={'y' + "' = 6x \\cos(3x^2)"} />
           <p className="mb-3">Students sketch arrows <InlineMath math={'x \\to g \\to y'} /> to visualize propagation.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for visualization prompts that convert equations into flow diagrams.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for visualization prompts that convert equations into flow diagrams.</em>
         </>
       )
     },
@@ -267,7 +268,7 @@ export default function GettingStartedPage() {
           <p className="mb-2">Use AI to generate zoomed graphs of <InlineMath math={'f(x)=3x+1'} /> near <InlineMath math={'x=2'} /> with shrinking intervals.</p>
           <p className="mb-2">Contrast one‑sided limits <InlineMath math={'\\lim_{x \\to 2^-} f(x)'} /> vs <InlineMath math={'\\lim_{x \\to 2^+} f(x)'} /> when discontinuities exist.</p>
           <p className="mb-2">Misconception: Limits are “just plugging in.” Counter with <BlockMath math={'f(x)=\\frac{x^2-4}{x-2}'} /> showing removable discontinuity.</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for prompts that generate continuous vs. discontinuous visualizations.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for prompts that generate continuous vs. discontinuous visualizations.</em>
         </>
       )
     },
@@ -286,7 +287,7 @@ export default function GettingStartedPage() {
           <p className="mb-2">AI animation: Riemann rectangles converging for <InlineMath math={'f(x)=x^2'} />.</p>
           <BlockMath math={'\\int_0^2 x^2 dx = \\left[ \\tfrac{x^3}{3} \\right]_0^2 = \\tfrac{8}{3}'} />
           <p className="mb-2">Discuss why answer ≠ <InlineMath math={'f(2)-f(0)=4'} />. Visualize limit as <InlineMath math={'n \\to \\infty'} /> partitions refine.</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for area‑approximation animation prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for area‑approximation animation prompts.</em>
         </>
       )
     },
@@ -296,14 +297,14 @@ export default function GettingStartedPage() {
       discipline: 'Biology',
       title: 'Photosynthesis',
       old: (<p className="mb-2">Photosynthesis is the process by which plants convert sunlight into chemical energy through chlorophyll.</p>),
-      redesigned: (<><p className="mb-2">Address the misconception that photosynthesis happens only during the day; add analogies comparing chloroplasts to solar batteries.</p><em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for analogy prompts.</em></>)
+  redesigned: (<><p className="mb-2">Address the misconception that photosynthesis happens only during the day; add analogies comparing chloroplasts to solar batteries.</p><em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for analogy prompts.</em></>)
     },
     {
       id: 'bio-enzyme-kinetics',
       discipline: 'Biology',
       title: 'Enzyme Kinetics (Michaelis–Menten)',
       old: (<p className="mb-2">The Michaelis–Menten equation is <InlineMath math={'v = \\frac{V_{max}[S]}{K_m + [S]}'} />. <InlineMath math={'V_{max}'} /> is max velocity; <InlineMath math={'K_m'} /> is the substrate concentration at half <InlineMath math={'V_{max}'} />.</p>),
-      redesigned: (<><p className="mb-2">Show dynamic plots as <InlineMath math={'[S]'} /> increases flattening near <InlineMath math={'V_{max}'} />.</p><p className="mb-2">Misconception: <InlineMath math={'K_m'} /> “is affinity” — clarify it is inversely related.</p><p className="mb-2">Overlay two enzymes: A (<InlineMath math={'K_m=2'} />) vs B (<InlineMath math={'K_m=8'} />) to compare saturation rate.</p><em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for data‑plot prompts.</em></>)
+  redesigned: (<><p className="mb-2">Show dynamic plots as <InlineMath math={'[S]'} /> increases flattening near <InlineMath math={'V_{max}'} />.</p><p className="mb-2">Misconception: <InlineMath math={'K_m'} /> “is affinity” — clarify it is inversely related.</p><p className="mb-2">Overlay two enzymes: A (<InlineMath math={'K_m=2'} />) vs B (<InlineMath math={'K_m=8'} />) to compare saturation rate.</p><em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for data‑plot prompts.</em></>)
     },
     // PHYSICS
     {
@@ -311,21 +312,21 @@ export default function GettingStartedPage() {
       discipline: 'Physics',
       title: 'Newton’s Third Law',
       old: (<p className="mb-2">Newton’s Third Law states that for every action, there is an equal and opposite reaction.</p>),
-      redesigned: (<><p className="mb-2">Use the “bug vs windshield” collision to contrast perceived vs actual force; annotate paired forces using free‑body diagrams.</p><em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for diagram generation prompts.</em></>)
+  redesigned: (<><p className="mb-2">Use the “bug vs windshield” collision to contrast perceived vs actual force; annotate paired forces using free‑body diagrams.</p><em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for diagram generation prompts.</em></>)
     },
     {
       id: 'phys-projectile-motion',
       discipline: 'Physics',
       title: 'Projectile Motion',
       old: (<p className="mb-2">A projectile’s path: <InlineMath math={'y = x\\tan\\theta - \\frac{g x^2}{2 v^2 \\cos^2\\theta}'} /> and range <InlineMath math={'R = \\frac{v^2 \\sin 2\\theta}{g}'} />.</p>),
-      redesigned: (<><p className="mb-2">Show AI animation varying <InlineMath math={'\\theta'} /> from 15°→75°.</p><p className="mb-2">Misconception: Maximum height and maximum range occur at same angle (they do not).</p><p className="mb-2">Interactive sliders for <InlineMath math={'v'} /> & <InlineMath math={'\\theta'} /> let students map relationships.</p><em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for motion simulation prompts.</em></>)
+  redesigned: (<><p className="mb-2">Show AI animation varying <InlineMath math={'\\theta'} /> from 15°→75°.</p><p className="mb-2">Misconception: Maximum height and maximum range occur at same angle (they do not).</p><p className="mb-2">Interactive sliders for <InlineMath math={'v'} /> & <InlineMath math={'\\theta'} /> let students map relationships.</p><em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for motion simulation prompts.</em></>)
     },
     {
       id: 'phys-shm',
       discipline: 'Physics',
       title: 'Simple Harmonic Motion',
       old: (<p className="mb-2">For an oscillator <InlineMath math={'x(t)=A\\cos(\\omega t + \\phi)'} />; period <InlineMath math={'T=\\frac{2\\pi}{\\omega}'} />.</p>),
-      redesigned: (<><p className="mb-2">Dynamic plots of displacement, velocity, acceleration; highlight 90° phase shift between velocity and displacement.</p><p className="mb-2">Misconception: Students think velocity & displacement are in phase— overlay graphs to counter.</p><em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for SHM visualization prompts.</em></>)
+  redesigned: (<><p className="mb-2">Dynamic plots of displacement, velocity, acceleration; highlight 90° phase shift between velocity and displacement.</p><p className="mb-2">Misconception: Students think velocity & displacement are in phase— overlay graphs to counter.</p><em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for SHM visualization prompts.</em></>)
     },
     // CHEMISTRY
     {
@@ -333,21 +334,21 @@ export default function GettingStartedPage() {
       discipline: 'Chemistry and Chemical Biology',
       title: 'Chemical Equilibrium',
       old: (<p className="mb-2">Chemical equilibrium occurs when forward and reverse reaction rates are equal.</p>),
-      redesigned: (<><p className="mb-2">Misconception: Reactions “stop” at equilibrium. Clarify dynamic nature with particle‑level animation.</p><p className="mb-2">Challenge: Predict shift when adding reactants (Le Châtelier).</p><em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for dynamic equilibrium prompts.</em></>)
+  redesigned: (<><p className="mb-2">Misconception: Reactions “stop” at equilibrium. Clarify dynamic nature with particle‑level animation.</p><p className="mb-2">Challenge: Predict shift when adding reactants (Le Châtelier).</p><em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for dynamic equilibrium prompts.</em></>)
     },
     {
       id: 'chem-titration',
       discipline: 'Chemistry and Chemical Biology',
       title: 'Acid–Base Titration Curve',
       old: (<p className="mb-2">Strong acid–strong base titration has an equivalence point at pH 7.</p>),
-      redesigned: (<><p className="mb-2">Generate curves for strong/weak combinations; annotate buffering & equivalence regions.</p><p className="mb-2">Misconceptions: “pH 7 always neutral”; weak acid titration equivalence pH &gt; 7.</p><em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for titration simulation prompts.</em></>)
+  redesigned: (<><p className="mb-2">Generate curves for strong/weak combinations; annotate buffering & equivalence regions.</p><p className="mb-2">Misconceptions: “pH 7 always neutral”; weak acid titration equivalence pH &gt; 7.</p><em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for titration simulation prompts.</em></>)
     },
     {
       id: 'chem-molecular-orbitals',
       discipline: 'Chemistry and Chemical Biology',
       title: 'Molecular Orbital Theory',
       old: (<p className="mb-2">Bonding orbitals form via constructive interference; antibonding via destructive interference.</p>),
-      redesigned: (<><p className="mb-2">AI orbital overlap animations (<InlineMath math={'H_2'} /> vs <InlineMath math={'O_2'} />); compare σ and π bonds.</p><p className="mb-2">Misconception: Electrons “sit” between atoms— show probability density distribution.</p><em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for orbital visualization prompts.</em></>)
+  redesigned: (<><p className="mb-2">AI orbital overlap animations (<InlineMath math={'H_2'} /> vs <InlineMath math={'O_2'} />); compare σ and π bonds.</p><p className="mb-2">Misconception: Electrons “sit” between atoms— show probability density distribution.</p><em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for orbital visualization prompts.</em></>)
     },
     // MARINE & ENVIRONMENTAL SCIENCE
     {
@@ -355,14 +356,14 @@ export default function GettingStartedPage() {
       discipline: 'Marine and Environmental Sciences',
       title: 'Ocean Acidification',
       old: (<p className="mb-2">As CO₂ dissolves in seawater, pH decreases due to carbonic acid formation.</p>),
-      redesigned: (<><p className="mb-2">Display data relating pH & carbonate ion concentration over time.</p><p className="mb-2">Misconception: Acidification ⇒ pH &lt; 7 (clarify: becoming less basic).</p><p className="mb-2">Visual: coral bleaching vs carbonate availability.</p><em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for ocean chemistry prompts.</em></>)
+  redesigned: (<><p className="mb-2">Display data relating pH & carbonate ion concentration over time.</p><p className="mb-2">Misconception: Acidification ⇒ pH &lt; 7 (clarify: becoming less basic).</p><p className="mb-2">Visual: coral bleaching vs carbonate availability.</p><em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for ocean chemistry prompts.</em></>)
     },
     {
       id: 'marine-thermohaline',
       discipline: 'Marine and Environmental Sciences',
       title: 'Thermohaline Circulation',
       old: (<p className="mb-2">Ocean currents are driven by differences in temperature and salinity.</p>),
-      redesigned: (<><p className="mb-2">Simulate density change with salinity & temperature; show deep circulation pathways.</p><p className="mb-2">Misconception: Currents only wind‑driven—introduce density gradients.</p><em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for circulation model prompts.</em></>)
+  redesigned: (<><p className="mb-2">Simulate density change with salinity & temperature; show deep circulation pathways.</p><p className="mb-2">Misconception: Currents only wind‑driven—introduce density gradients.</p><em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for circulation model prompts.</em></>)
     },
     // PSYCHOLOGY
     {
@@ -370,14 +371,14 @@ export default function GettingStartedPage() {
       discipline: 'Psychology',
       title: 'Classical Conditioning',
       old: (<p className="mb-2">Pavlov’s dog learned to salivate at the sound of a bell through association.</p>),
-      redesigned: (<><p className="mb-2">AI generates parallel human examples (ringtone → anticipation).</p><p className="mb-2">Misconception: Conditioning is “mindless”— show neural reward pathway diagram.</p><em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for conditioning scenario prompts.</em></>)
+  redesigned: (<><p className="mb-2">AI generates parallel human examples (ringtone → anticipation).</p><p className="mb-2">Misconception: Conditioning is “mindless”— show neural reward pathway diagram.</p><em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for conditioning scenario prompts.</em></>)
     },
     {
       id: 'psych-cognitive-biases',
       discipline: 'Psychology',
       title: 'Cognitive Biases',
       old: (<p className="mb-2">Confirmation bias occurs when people seek evidence supporting existing beliefs.</p>),
-      redesigned: (<><p className="mb-2">AI-generated everyday feed examples reveal selective exposure.</p><p className="mb-2">Interactive polls let students notice their own bias patterns.</p><em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for bias reflection prompts.</em></>)
+  redesigned: (<><p className="mb-2">AI-generated everyday feed examples reveal selective exposure.</p><p className="mb-2">Interactive polls let students notice their own bias patterns.</p><em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for bias reflection prompts.</em></>)
     }
   ];
 
@@ -413,7 +414,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI generates a real-world version: ‘A conservation biologist is building an enclosure with a parabolic boundary <InlineMath math={'y = 12 - x^2'} />. What dimensions maximize space while minimizing fencing cost?’</p>
           <p className="mb-2">Students interpret the optimization in context, adding assumptions and constraints.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for context-based problem generation prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for context-based problem generation prompts.</em>
         </>
       )
     },
@@ -431,7 +432,7 @@ export default function GettingStartedPage() {
           <p className="mb-2">“AI generates messy, real-world datasets (e.g., survey responses with missing values).</p>
           <p className="mb-2">The scenario: ‘You are analyzing field data on ocean temperature anomalies — what’s the impact of outliers on your conclusion?’</p>
           <p className="mb-2">Students decide how to clean, interpret, and justify results.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for prompts that generate imperfect or authentic datasets.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for prompts that generate imperfect or authentic datasets.</em>
         </>
       )
     },
@@ -465,7 +466,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI builds an extended case: ‘A population of plants shows unusual inheritance for flower color. Use genetic reasoning to determine whether incomplete dominance or codominance explains the pattern.’</p>
           <p className="mb-2">Include randomly generated phenotypic data for interpretation.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for prompts that generate variable genetic datasets.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for prompts that generate variable genetic datasets.</em>
         </>
       )
     },
@@ -482,7 +483,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI simulates changing variables (deforestation rate, species introduction) and asks students to predict ecological balance shifts.</p>
           <p className="mb-2">Scenario: ‘A new invasive species enters the forest — model the likely impact on biodiversity over five years.’”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for ecological simulation prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for ecological simulation prompts.</em>
         </>
       )
     },
@@ -516,7 +517,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI generates a realistic engineering scenario: ‘Design a pendulum-based sensor for earthquake detection. How would amplitude, damping, and period affect accuracy?’</p>
           <p className="mb-2">Students connect theory to device function.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for engineering application prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for engineering application prompts.</em>
         </>
       )
     },
@@ -533,7 +534,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI generates an applied scenario: ‘A bridge designer must account for daily temperature shifts between -10°C and 40°C. Predict stress and expansion impact on bridge joints.’</p>
           <p className="mb-2">Visual output: color map of stress distribution.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for prompts that turn equations into applied design cases.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for prompts that turn equations into applied design cases.</em>
         </>
       )
     },
@@ -567,7 +568,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI builds an open-ended case: ‘A pharmaceutical chemist must optimize aspirin yield under new environmental regulations limiting solvent use.’</p>
           <p className="mb-2">Students propose greener synthesis routes and compare trade-offs.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for prompts that build sustainability or optimization-based chemistry cases.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for prompts that build sustainability or optimization-based chemistry cases.</em>
         </>
       )
     },
@@ -584,7 +585,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI produces a scenario: ‘A reactor at 450 K shows a sudden drop in product concentration. Use kinetic data to diagnose whether it’s due to temperature fluctuation or catalyst poisoning.’</p>
           <p className="mb-2">Students interpret graphical data generated by AI.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for prompts that simulate lab data for analysis.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for prompts that simulate lab data for analysis.</em>
         </>
       )
     },
@@ -618,7 +619,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI builds a regional case: ‘In 2024, reef surveys near Key Largo show a 15% drop in coral cover. Using temperature and pH data, predict long-term ecosystem outcomes and propose a monitoring strategy.’</p>
           <p className="mb-2">Students engage in quantitative forecasting.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for data storytelling prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for data storytelling prompts.</em>
         </>
       )
     },
@@ -636,7 +637,7 @@ export default function GettingStartedPage() {
           <p className="mb-2">“AI simulates an offshore spill, generating varying current speeds and wind directions.</p>
           <p className="mb-2">Scenario: ‘Predict which coastal zones will be most affected and outline containment priorities.’</p>
           <p className="mb-2">Students justify intervention sequence.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for prompts that create spatial simulation cases.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for prompts that create spatial simulation cases.</em>
         </>
       )
     },
@@ -670,7 +671,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI creates a classroom case: ‘Students in two online courses show differing retention rates. Analyze whether interface design or instructional pacing contributes to extraneous load.’</p>
           <p className="mb-2">Students propose redesign strategies.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for learning scenario generation prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for learning scenario generation prompts.</em>
         </>
       )
     },
@@ -687,7 +688,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI generates an ethics simulation: ‘A research assistant notices participants under peer pressure to alter responses in a group task. Evaluate ethical duties and how the researcher should respond.’</p>
           <p className="mb-2">Discussion focuses on experimental validity and moral reasoning.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for ethics simulation prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for ethics simulation prompts.</em>
         </>
       )
     },
@@ -714,7 +715,7 @@ export default function GettingStartedPage() {
             <li>Write the integral that represents the area and explain your setup before solving.</li>
             <li>Reflect: what does the intersection point represent in the context of area?”</li>
           </ol>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for prompts that guide students through multi-step problem-solving.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for prompts that guide students through multi-step problem-solving.</em>
         </>
       )
     },
@@ -734,7 +735,7 @@ export default function GettingStartedPage() {
             <li>Predict what you expect before solving.</li>
             <li>After solving, compare your intuition to the result.”</li>
           </ol>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for reasoning-scaffold templates.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for reasoning-scaffold templates.</em>
         </>
       )
     },
@@ -753,7 +754,7 @@ export default function GettingStartedPage() {
             <li>Explain how membrane structure affects the process.</li>
             <li>Summarize your findings in a comparative table.”</li>
           </ol>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for step-by-step explanation prompts.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for step-by-step explanation prompts.</em>
         </>
       )
     },
@@ -771,7 +772,7 @@ export default function GettingStartedPage() {
             <li>Analyze: given a DNA sequence change, determine whether it causes a silent, missense, or nonsense mutation.</li>
             <li>Explain your reasoning before checking with AI feedback.”</li>
           </ol>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for scaffold templates that integrate reasoning and verification.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for scaffold templates that integrate reasoning and verification.</em>
         </>
       )
     },
@@ -790,7 +791,7 @@ export default function GettingStartedPage() {
             <li>Before calculating, predict whether increasing the distance doubles or halves the field.</li>
             <li>Calculate and compare your prediction to the result.”</li>
           </ol>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for conceptual reasoning scaffolds.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for conceptual reasoning scaffolds.</em>
         </>
       )
     },
@@ -808,7 +809,7 @@ export default function GettingStartedPage() {
             <li>Before solving, estimate whether the velocity will be greater or less than 10 m/s.</li>
             <li>Reflect on how potential energy converts to kinetic energy.”</li>
           </ol>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for structured estimation prompts.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for structured estimation prompts.</em>
         </>
       )
     },
@@ -827,7 +828,7 @@ export default function GettingStartedPage() {
             <li>Sketch the intermediate structure before the substitution.</li>
             <li>Compare SN1 and SN2 pathways for this reaction.”</li>
           </ol>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for scaffold templates using guided chemical reasoning.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for scaffold templates using guided chemical reasoning.</em>
         </>
       )
     },
@@ -846,7 +847,7 @@ export default function GettingStartedPage() {
             <li>Use bond enthalpies to estimate ΔH.</li>
             <li>Discuss why experimental and calculated values may differ.”</li>
           </ol>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for multi-step quantitative scaffolds.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for multi-step quantitative scaffolds.</em>
         </>
       )
     },
@@ -865,7 +866,7 @@ export default function GettingStartedPage() {
             <li>Match real-world examples to each mechanism.</li>
             <li>Use AI to visualize a current map for discussion.”</li>
           </ol>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for visualization scaffold prompts.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for visualization scaffold prompts.</em>
         </>
       )
     },
@@ -883,7 +884,7 @@ export default function GettingStartedPage() {
             <li>Research current policy responses in two countries.</li>
             <li>Propose one improvement and justify it.”</li>
           </ol>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for critical thinking scaffolds.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for critical thinking scaffolds.</em>
         </>
       )
     },
@@ -902,7 +903,7 @@ export default function GettingStartedPage() {
             <li>Compare retrieval processes using examples.</li>
             <li>Summarize in a table or diagram.”</li>
           </ol>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for prompts that scaffold comparison reasoning.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for prompts that scaffold comparison reasoning.</em>
         </>
       )
     },
@@ -920,7 +921,7 @@ export default function GettingStartedPage() {
             <li>Predict possible confounds and how to manage them.</li>
             <li>Write the step-by-step procedure and expected results.”</li>
           </ol>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for scaffold templates for hypothesis-driven design.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for scaffold templates for hypothesis-driven design.</em>
         </>
       )
     }
@@ -948,7 +949,7 @@ export default function GettingStartedPage() {
           <div className="mt-3">
             <BlockMath math={'\\sum_{k=1}^{n} (2k-1) = n^2'} />
           </div>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a className="underline decoration-dotted" href="/explore/prompts">Prompt Library</a> for collaborative proof generation prompts.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link className="underline decoration-dotted" href="/explore/prompts">Prompt Library</Link> for collaborative proof generation prompts.</em>
         </>
       )
     },
@@ -962,7 +963,7 @@ export default function GettingStartedPage() {
           <p className="mb-2">“AI generates diverse, real-world datasets (e.g., rainfall vs. crop yield, time vs. bacteria growth).</p>
           <p className="mb-2">Students compare data patterns, identify outliers, and discuss model fit in groups.</p>
           <p className="mb-2">AI provides visual feedback and alternate model suggestions for comparison.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a className="underline decoration-dotted" href="/explore/prompts">Prompt Library</a> for data-based discussion prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link className="underline decoration-dotted" href="/explore/prompts">Prompt Library</Link> for data-based discussion prompts.</em>
         </>
       )
     },
@@ -977,7 +978,7 @@ export default function GettingStartedPage() {
           <p className="mb-2">“AI generates a simulation where beetle color, environment, and predator type vary.</p>
           <p className="mb-2">Each student group manipulates one variable and observes outcomes.</p>
           <p className="mb-2">The class then compares which trait combinations survive best and why.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a className="underline decoration-dotted" href="/explore/prompts">Prompt Library</a> for simulation setup prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link className="underline decoration-dotted" href="/explore/prompts">Prompt Library</Link> for simulation setup prompts.</em>
         </>
       )
     },
@@ -992,7 +993,7 @@ export default function GettingStartedPage() {
           <p className="mb-2">Groups receive temperature and pH conditions from AI.</p>
           <p className="mb-2">They hypothesize outcomes, then use AI-generated plots to interpret how enzyme rate changes.</p>
           <p className="mb-2">Discussion centers on kinetic reasoning and error interpretation.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a className="underline decoration-dotted" href="/explore/prompts">Prompt Library</a> for virtual lab prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link className="underline decoration-dotted" href="/explore/prompts">Prompt Library</Link> for virtual lab prompts.</em>
         </>
       )
     },
@@ -1007,7 +1008,7 @@ export default function GettingStartedPage() {
           <p className="mb-2">“AI transforms it into a lab-style team challenge:</p>
           <p className="mb-2">Each group chooses a different launch angle <InlineMath math={'\\theta'} /> and predicts which yields the farthest distance.</p>
           <p className="mb-2">AI simulates trajectories, visualizes the parabolic paths, and introduces random wind effects for critical discussion.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a className="underline decoration-dotted" href="/explore/prompts">Prompt Library</a> for simulation activity prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link className="underline decoration-dotted" href="/explore/prompts">Prompt Library</Link> for simulation activity prompts.</em>
         </>
       )
     },
@@ -1021,7 +1022,7 @@ export default function GettingStartedPage() {
           <p className="mb-2">“AI prompts small groups with everyday examples that appear to ‘violate’ the law (e.g., jumping off a skateboard, tug-of-war).</p>
           <p className="mb-2">Students argue for or against the idea that forces are always equal and opposite.</p>
           <p className="mb-2">AI moderates by generating clarifying visuals or counterexamples.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a className="underline decoration-dotted" href="/explore/prompts">Prompt Library</a> for misconception-based activity prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link className="underline decoration-dotted" href="/explore/prompts">Prompt Library</Link> for misconception-based activity prompts.</em>
         </>
       )
     },
@@ -1039,7 +1040,7 @@ export default function GettingStartedPage() {
             <li>AI generates animated molecular interactions.</li>
             <li>Students compare predictions to observed simulation results and discuss safety implications.”</li>
           </ol>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a className="underline decoration-dotted" href="/explore/prompts">Prompt Library</a> for visualization activity prompts.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link className="underline decoration-dotted" href="/explore/prompts">Prompt Library</Link> for visualization activity prompts.</em>
         </>
       )
     },
@@ -1052,7 +1053,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI generates interactive equilibrium diagrams showing concentration changes when temperature or pressure is altered.</p>
           <p className="mb-2">Students manipulate conditions and discuss equilibrium shifts in real time.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a className="underline decoration-dotted" href="/explore/prompts">Prompt Library</a> for interactive conceptual prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link className="underline decoration-dotted" href="/explore/prompts">Prompt Library</Link> for interactive conceptual prompts.</em>
         </>
       )
     },
@@ -1066,7 +1067,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI creates a virtual scenario where students track carbon flow across different ocean layers.</p>
           <p className="mb-2">Groups manipulate temperature, CO₂ levels, and phytoplankton density to observe cycle shifts.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a className="underline decoration-dotted" href="/explore/prompts">Prompt Library</a> for system simulation prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link className="underline decoration-dotted" href="/explore/prompts">Prompt Library</Link> for system simulation prompts.</em>
         </>
       )
     },
@@ -1079,7 +1080,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI simulates a coastal spill; each group represents a different stakeholder (scientist, policy maker, local community).</p>
           <p className="mb-2">They use AI-provided data (currents, wind, toxicity) to make decisions and defend trade-offs.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a className="underline decoration-dotted" href="/explore/prompts">Prompt Library</a> for role-play simulation prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link className="underline decoration-dotted" href="/explore/prompts">Prompt Library</Link> for role-play simulation prompts.</em>
         </>
       )
     },
@@ -1094,7 +1095,7 @@ export default function GettingStartedPage() {
           <p className="mb-2">“AI sets up a class scenario:</p>
           <p className="mb-2">Groups act as research teams making a risky funding decision with AI-generated evidence.</p>
           <p className="mb-2">They reflect on how bias, conformity, or leadership style influenced their choice.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a className="underline decoration-dotted" href="/explore/prompts">Prompt Library</a> for interactive scenario prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link className="underline decoration-dotted" href="/explore/prompts">Prompt Library</Link> for interactive scenario prompts.</em>
         </>
       )
     },
@@ -1108,7 +1109,7 @@ export default function GettingStartedPage() {
           <p className="mb-2">“AI provides a digital stopwatch or visual cue simulation.</p>
           <p className="mb-2">Students record reaction times under distraction vs. focus conditions.</p>
           <p className="mb-2">They analyze group data and discuss neural mechanisms of attention.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a className="underline decoration-dotted" href="/explore/prompts">Prompt Library</a> for experiment generation prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link className="underline decoration-dotted" href="/explore/prompts">Prompt Library</Link> for experiment generation prompts.</em>
         </>
       )
     }
@@ -1133,7 +1134,7 @@ export default function GettingStartedPage() {
           </ul>
           <p className="mt-3 text-[13px] leading-relaxed">Then provides sample comments like:<br />‘The proof is logically sound but misses justification for the step from <InlineMath math={'a^2 + b^2'} /> to <InlineMath math={'c^2'} />. Try explaining this transition explicitly.’</p>
           <p className="mt-2 text-[13px] leading-relaxed">Students can use the same rubric to self-assess before submission.”</p>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for proof feedback and rubric templates.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for proof feedback and rubric templates.</em>
         </>
       )
     },
@@ -1152,7 +1153,7 @@ export default function GettingStartedPage() {
           </ul>
           <p className="mt-3 text-[13px] leading-relaxed">For example:<br />‘You correctly used the power rule for <InlineMath math={'x^3'} />, but forgot to apply the chain rule to <InlineMath math={'\\sin(x^2)'} />.’</p>
           <p className="mt-2 text-[13px] leading-relaxed">AI then generates reflection prompts like,<br />‘At which step did the rule confusion occur? What might you check next time?’”</p>
-          <em className="block text-[12px] text-gray-600 mt-3">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for diagnostic feedback prompts.</em>
+          <em className="block text-[12px] text-gray-600 mt-3">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for diagnostic feedback prompts.</em>
         </>
       )
     },
@@ -1166,7 +1167,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI creates targeted rubric categories — hypothesis clarity, experimental design, data interpretation, and discussion strength — and offers examples of high-quality feedback like:<br />‘Your hypothesis was clear, but the methods section needs more detail on controls used.’”</p>
           <p className="mb-2 text-[13px] leading-relaxed">It can also highlight patterns across the class to help you adjust teaching focus.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for lab report rubric generation prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for lab report rubric generation prompts.</em>
         </>
       )
     },
@@ -1179,7 +1180,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI clusters responses by misconception type (e.g., ‘confusing mitosis and meiosis’).”</p>
           <p className="mb-2 text-[13px] leading-relaxed">It then suggests feedback stems such as:<br />‘Many students describe crossing-over as part of mitosis; revisit how meiosis differs structurally and functionally.’”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for misconception pattern feedback prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for misconception pattern feedback prompts.</em>
         </>
       )
     },
@@ -1199,7 +1200,7 @@ export default function GettingStartedPage() {
             <li>Final computation</li>
           </ul>
           <p className="mt-3 text-[13px] leading-relaxed">For instance, if a student calculates projectile height using <InlineMath math={'v^2 = u^2 + 2as'} />, AI can respond: ‘Formula chosen correctly, but variable substitution used <InlineMath math={'a = -9.8'} /> instead of <InlineMath math={'a = -g'} /> — explain your choice.’”</p>
-          <em className="block text-[12px] text-gray-600 mt-2">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for rubric-based feedback prompts.</em>
+          <em className="block text-[12px] text-gray-600 mt-2">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for rubric-based feedback prompts.</em>
         </>
       )
     },
@@ -1212,7 +1213,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI provides preliminary comments, such as:<br />‘Excellent connection between force and acceleration, but lacks examples showing equal and opposite interactions.’”</p>
           <p className="mb-2 text-[13px] leading-relaxed">You then refine and personalize these comments before returning feedback.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for essay comment-generation prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for essay comment-generation prompts.</em>
         </>
       )
     },
@@ -1231,7 +1232,7 @@ export default function GettingStartedPage() {
             <li>Intermediate stability</li>
             <li>Structural reasoning</li>
           </ul>
-          <em className="block text-[12px] text-gray-600 mt-2">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for organic mechanism feedback prompts.</em>
+          <em className="block text-[12px] text-gray-600 mt-2">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for organic mechanism feedback prompts.</em>
         </>
       )
     },
@@ -1249,7 +1250,7 @@ export default function GettingStartedPage() {
             <li>Correct safety response</li>
             <li>Explanation clarity</li>
           </ul>
-          <em className="block text-[12px] text-gray-600 mt-2">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for rubric reflection prompts.</em>
+          <em className="block text-[12px] text-gray-600 mt-2">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for rubric reflection prompts.</em>
         </>
       )
     },
@@ -1263,7 +1264,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI reviews sample reports for structure and clarity:<br />‘Your observations are detailed but lack quantitative salinity data.’”</p>
           <p className="mb-2 text-[13px] leading-relaxed">It creates a rubric emphasizing data precision, environmental context, and analysis depth.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for fieldwork rubric prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for fieldwork rubric prompts.</em>
         </>
       )
     },
@@ -1275,7 +1276,7 @@ export default function GettingStartedPage() {
       redesigned: (
         <>
           <p className="mb-2">“AI detects common graphing errors (axes swapped, missing labels) and provides targeted notes:<br />‘Your plot correctly shows CO₂ rise, but time scale inconsistencies make correlation misleading — recheck your x-axis intervals.’”</p>
-          <em className="block text-[12px] text-gray-600 mt-1">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for visualization feedback prompts.</em>
+          <em className="block text-[12px] text-gray-600 mt-1">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for visualization feedback prompts.</em>
         </>
       )
     },
@@ -1290,7 +1291,7 @@ export default function GettingStartedPage() {
           <p className="mb-2">“AI develops rubric categories — conceptual understanding, personal reflection, clarity, and application.</p>
           <p className="mb-2 text-[13px] leading-relaxed">It generates example comments like:<br />‘You explained confirmation bias well but didn’t relate it to your own decision-making experience.’”</p>
           <p className="mb-2 text-[13px] leading-relaxed">Faculty can then edit and personalize before releasing.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for essay rubric templates.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for essay rubric templates.</em>
         </>
       )
     },
@@ -1303,7 +1304,7 @@ export default function GettingStartedPage() {
         <>
           <p className="mb-2">“AI compares student methods to good-practice examples, suggesting improvements like:<br />‘Your control condition needs clearer description — what variable remains constant?’”</p>
           <p className="mb-2 text-[13px] leading-relaxed">AI also produces a rubric outline including reliability, validity, and ethics.”</p>
-          <em className="block text-[12px] text-gray-600">See the <a href="/explore/prompts" className="underline decoration-dotted">Prompt Library</a> for experimental design feedback prompts.</em>
+          <em className="block text-[12px] text-gray-600">See the <Link href="/explore/prompts" className="underline decoration-dotted">Prompt Library</Link> for experimental design feedback prompts.</em>
         </>
       )
     }
