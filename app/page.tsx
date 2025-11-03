@@ -14,15 +14,23 @@ export default function Home(){
         <div className="absolute bottom-[-4rem] right-[-4rem] w-96 h-96 bg-rose-100/40 rounded-full blur-3xl" />
       </div>
       <Sidebar open={open} onClose={()=>setOpen(false)} />
-  {/* Top-left anchored logo */}
-  <Image
-    src="/northeastern-logo.png"
-    alt="Northeastern University Logo"
-    width={170}
-    height={46}
-    priority
-    className="absolute top-4 left-4 md:top-6 md:left-6 w-auto h-auto max-w-[190px] select-none pointer-events-none opacity-95"
-  />
+  {/* Top-left anchored logo (clickable) */}
+  <a
+    href="https://cos.northeastern.edu/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Northeastern University College of Science homepage"
+    className="absolute top-2 left-2 md:top-3 md:left-3 z-10"
+  >
+    <Image
+      src="/images/highlights/cos-logo.png"
+      alt="Northeastern University College of Science Logo"
+      width={220}
+      height={60}
+      priority
+      className="w-auto h-auto opacity-95 hover:opacity-100 transition-opacity"
+    />
+  </a>
   <section className="relative max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-semibold text-gray-800 mb-5 leading-tight">
           Welcome to {" "}
