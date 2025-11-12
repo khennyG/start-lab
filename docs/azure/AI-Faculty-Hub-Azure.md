@@ -2,6 +2,13 @@
 
 **Live site:** [https://start-lab-sage.vercel.app/](https://start-lab-sage.vercel.app/) (still in dev)
 
+## Architecture Design Diagram
+
+I created a small mockup to visualize the architecture of our project.  
+You’ll need to be logged into your Northeastern Claude account to view it.
+
+ [View the Claude Artifact here](https://claude.ai/artifacts/c549d7ee-982c-4f77-a895-87945cc3d00a)
+
 ---
 
 ## 1. Overview
