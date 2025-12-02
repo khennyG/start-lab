@@ -30,6 +30,7 @@ export type SectionFacultySubmissionsProps = {
   titleLabel?: string; // default: "Assignment Title"
   titlePlaceholder?: string;
   db?: ReturnType<typeof getFirestore>; // optional override for testing
+  formVariant?: "modal" | "inline"; // default: modal
 };
 
 type SubmissionDoc = {
@@ -82,8 +83,10 @@ export default function SectionFacultySubmissions({
   titleLabel = "Assignment Title",
   titlePlaceholder = "e.g., Optimization Project",
   db = defaultDb,
+  formVariant = "modal",
 }: SectionFacultySubmissionsProps) {
   const [showModal, setShowModal] = useState(false);
+  const [showInlineForm, setShowInlineForm] = useState(false);
   const [showToast, setShowToast] = useState<string | null>(null);
   const [form, setForm] = useState({
     title: "",
@@ -180,15 +183,122 @@ export default function SectionFacultySubmissions({
       <div className="flex items-center justify-between">
         <button
           type="button"
-          onClick={() => setShowModal(true)}
-          className="inline-flex items-center rounded-md bg-[#e85c4a] text-white px-3 py-2 text-[13px] font-medium shadow-sm hover:shadow focus:outline-none"
+          onClick={() => (formVariant === "inline" ? setShowInlineForm((v) => !v) : setShowModal(true))}
+          className="inline-flex items-center rounded-md bg-[#e85c4a] text-white px-3 py-2 text-[13px] font-medium shadow-sm hover:shadow focus:outline-none whitespace-nowrap"
         >
-          {submitButtonText}
+          {formVariant === "inline" ? (showInlineForm ? "Hide Form" : submitButtonText) : submitButtonText}
         </button>
         {streamError && (
           <div className="ml-3 text-[12px] text-red-600">{streamError}</div>
         )}
       </div>
+
+      {/* Inline Form (optional variant) */}
+      {formVariant === "inline" && showInlineForm && (
+        <div className="rounded-xl border border-rose-200 bg-rose-50/70 shadow-sm p-4 md:p-5">
+          <h3 className="text-sm md:text-base font-semibold text-gray-900 mb-3">{modalTitle}</h3>
+          <form onSubmit={handleSubmit} className="space-y-3">
+            <div className={`rounded-md border ${errors.title ? "border-red-300" : "border-gray-300"} bg-white p-3 focus-within:ring-2 focus-within:ring-[#e85c4a]`}>
+              <label className="block text-[12px] font-medium text-gray-700 mb-1">{titleLabel}</label>
+              <input
+                type="text"
+                value={form.title}
+                onChange={(e) => setForm({ ...form, title: e.target.value })}
+                placeholder={titlePlaceholder}
+                className="w-full text-[13px] focus:outline-none"
+                required
+              />
+              {errors.title && <p className="mt-1 text-[11px] text-red-600">{errors.title}</p>}
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-3">
+              <div className={`rounded-md border ${errors.professorName ? "border-red-300" : "border-gray-300"} bg-white p-3 focus-within:ring-2 focus-within:ring-[#e85c4a]`}>
+                <label className="block text-[12px] font-medium text-gray-700 mb-1">Professor Name</label>
+                <input
+                  type="text"
+                  value={form.professorName}
+                  onChange={(e) => setForm({ ...form, professorName: e.target.value })}
+                  placeholder="e.g., Dr. Ana Silva"
+                  className="w-full text-[13px] focus:outline-none"
+                  required
+                />
+                {errors.professorName && <p className="mt-1 text-[11px] text-red-600">{errors.professorName}</p>}
+              </div>
+              <div className={`rounded-md border ${errors.course ? "border-red-300" : "border-gray-300"} bg-white p-3 focus-within:ring-2 focus-within:ring-[#e85c4a]`}>
+                <label className="block text-[12px] font-medium text-gray-700 mb-1">Course Title or Code</label>
+                <input
+                  type="text"
+                  value={form.course}
+                  onChange={(e) => setForm({ ...form, course: e.target.value })}
+                  placeholder="e.g., MATH 234"
+                  className="w-full text-[13px] focus:outline-none"
+                  required
+                />
+                {errors.course && <p className="mt-1 text-[11px] text-red-600">{errors.course}</p>}
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-3">
+              <div className="rounded-md border border-gray-300 bg-white p-3 focus-within:ring-2 focus-within:ring-[#e85c4a]">
+                <label className="block text-[12px] font-medium text-gray-700 mb-1">Discipline</label>
+                <select
+                  value={form.discipline}
+                  onChange={(e) => setForm({ ...form, discipline: e.target.value as COSDiscipline })}
+                  className="w-full text-[13px] focus:outline-none bg-white"
+                >
+                  {([
+                    "Mathematics",
+                    "Biology",
+                    "Physics",
+                    "Chemistry and Chemical Biology",
+                    "Marine and Environmental Sciences",
+                    "Psychology",
+                  ] as COSDiscipline[]).map((d) => (
+                    <option key={d} value={d}>{d}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <div className={`rounded-md border ${errors.oldAssignment ? "border-red-300" : "border-gray-300"} bg-white p-3 focus-within:ring-2 focus-within:ring-[#e85c4a]`}>
+              <label className="block text-[12px] font-medium text-gray-700 mb-1">{oldLabel}</label>
+              <textarea
+                value={form.oldAssignment}
+                onChange={(e) => setForm({ ...form, oldAssignment: e.target.value })}
+                placeholder="Describe the original assignment..."
+                className="w-full min-h-[90px] text-[13px] focus:outline-none"
+                required
+              />
+              {errors.oldAssignment && <p className="mt-1 text-[11px] text-red-600">{errors.oldAssignment}</p>}
+            </div>
+
+            <div className={`rounded-md border ${errors.newAssignment ? "border-red-300" : "border-gray-300"} bg-white p-3 focus-within:ring-2 focus-within:ring-[#e85c4a]`}>
+              <label className="block text-[12px] font-medium text-gray-700 mb-1">{newLabel}</label>
+              <textarea
+                value={form.newAssignment}
+                onChange={(e) => setForm({ ...form, newAssignment: e.target.value })}
+                placeholder="Explain the redesigned version..."
+                className="w-full min-h-[90px] text-[13px] focus:outline-none"
+                required
+              />
+              {errors.newAssignment && <p className="mt-1 text-[11px] text-red-600">{errors.newAssignment}</p>}
+            </div>
+
+            <div className="pt-1 flex justify-end gap-2">
+              <button
+                type="button"
+                onClick={() => setShowInlineForm(false)}
+                className="px-3 py-2 text-[13px] font-medium text-gray-700 hover:text-gray-900 transition-colors"
+              >
+                Cancel
+              </button>
+              <button type="submit" className="inline-flex items-center rounded-md bg-[#e85c4a] text-white px-3 py-2 text-[13px] font-medium shadow-sm hover:shadow focus:outline-none whitespace-nowrap">
+                Post submission
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
 
       {/* Collapsible list card */}
       <div className="border border-gray-200 rounded-xl bg-white shadow-sm">
@@ -253,8 +363,8 @@ export default function SectionFacultySubmissions({
         </div>
       </div>
 
-      {/* Modal */}
-      {showModal && (
+      {/* Modal (default variant) */}
+      {formVariant === "modal" && showModal && (
         <div className="fixed inset-0 z-50">
           <div className="absolute inset-0 bg-black/30" onClick={() => setShowModal(false)} />
           <div className="absolute inset-0 flex items-center justify-center p-4">

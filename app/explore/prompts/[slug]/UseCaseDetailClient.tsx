@@ -30,25 +30,20 @@ export default function UseCaseDetailClient({ caseData }: { caseData: UseCase })
     };
   };
 
-  // Ensure Step [8] uses the exact required phrasing; if absent, append the canonical Step [8] line at the end.
+  // Ensure the clarification clause exists without any numbered label; replace any legacy label with the plain clause.
   const ensureClarifierSuffix = (text: string) => {
-    const exactStep8 = `[8] Clarification Step (Mandatory) — Before producing the final version, ask me three clarification questions to confirm understanding. Then summarize my answers back to me in 3 bullets. Only after that, present the final output in clearly labeled sections.`;
+    const exactClause = `Before producing the final version, ask me three clarification questions to confirm understanding. Then summarize my answers back to me in 3 bullets. Only after that, present the final output in clearly labeled sections.`;
 
-    // 1) Normalize the Step [8] line inside the prompt when present with any shorter variant
-    const normalizeStep8Line = (t: string) => t.replace(
-      /^\[8\]\s*Clarification Step\s*\(Mandatory\)\s*—[^\n]*$/m,
-      exactStep8
+    // 1) Remove/replace any legacy "[8] Clarification Step (Mandatory) - ..." line with the plain clause
+    const withoutLabeled = text.replace(
+      /^\[8\]\s*Clarification Step\s*\(Mandatory\)\s*(—|–)[^\n]*$/m,
+      exactClause
     );
 
-    const trimmed = text.trimEnd();
-    const normalized = normalizeStep8Line(trimmed);
-
-    // If the prompt already includes the explicit Clarification Step [8], return the normalized text.
-    const hasStep8 = /\n\[8\]\s*Clarification Step\s*\(Mandatory\)\s*—/i.test(normalized) || normalized.startsWith('[8] Clarification Step (Mandatory) —');
-    if (hasStep8) return normalized;
-
-    // Otherwise, append the canonical Step [8] clause at the end.
-    return normalized + `\n\n${exactStep8}`;
+    const trimmed = withoutLabeled.trimEnd();
+    // 2) If the plain clause already exists anywhere, keep as is; otherwise, append it.
+    if (trimmed.includes(exactClause)) return trimmed;
+    return trimmed + `\n\n${exactClause}`;
   };
 
   const [openNotesIds, setOpenNotesIds] = useState<Set<string>>(new Set());
@@ -57,6 +52,19 @@ export default function UseCaseDetailClient({ caseData }: { caseData: UseCase })
       const next = new Set(prev);
       if (next.has(id)) next.delete(id); else next.add(id);
       return next;
+    });
+  };
+
+  // Render helper: bold placeholders like [Insert ...] or [Paste ...] without
+  // altering the underlying text that gets copied to clipboard.
+  const renderWithBoldPlaceholders = (text: string) => {
+    const pattern = /(\[(?:Insert|Paste)[^\]]+\])/g;
+    const parts = text.split(pattern);
+    return parts.map((part, i) => {
+      if (/^\[(?:Insert|Paste)[^\]]+\]$/.test(part)) {
+        return <strong key={i}>{part}</strong>;
+      }
+      return <span key={i}>{part}</span>;
     });
   };
 
@@ -75,7 +83,7 @@ export default function UseCaseDetailClient({ caseData }: { caseData: UseCase })
       .map(p => {
         const { main } = splitPrompt(p.promptText);
         const withClause = ensureClarifierSuffix(main);
-        return `${p.title} — ${p.approach}\n\n${withClause}`;
+        return `${p.title} - ${p.approach}\n\n${withClause}`;
       })
       .join("\n\n------------------------------\n\n");
     await copyText(bundle, 'ALL');
@@ -109,6 +117,26 @@ export default function UseCaseDetailClient({ caseData }: { caseData: UseCase })
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-2">{caseData.title}</h1>
         <p className="text-gray-700 md:text-lg">{caseData.description}</p>
       </header>
+
+      {/* Policy disclaimer for AI use in feedback and grading - only for the feedback/rubric use case */}
+      {caseData.id === 'feedback-rubric' && (
+        <div className="mb-5 rounded-xl border border-red-300 bg-red-50/80 shadow-sm px-5 py-4 text-[13px] text-red-900">
+          <p className="font-semibold text-red-800">Policy Reminder: Use of AI for Feedback and Grading</p>
+          <p className="mt-1">
+            Northeastern University policy governs the use of AI tools in courses. Please review
+            {' '}<Link href="https://policies.northeastern.edu/policy125/" target="_blank" rel="noopener" className="underline decoration-dotted">Policy 125</Link>{' '}
+            and follow your college or department guidance.
+          </p>
+          <ul className="mt-2 list-disc pl-5 space-y-1">
+            <li>Keep a human in the loop - do not rely solely on AI to grade or determine outcomes.</li>
+            <li>Protect student privacy (FERPA) - avoid uploading identifiable student work to external tools.</li>
+            <li>Be transparent with students about how AI-assisted feedback is used in your course.</li>
+            <li>Verify and edit AI output, you remain responsible for accuracy, equity, and tone.</li>
+            <li>Document your AI use in course materials, for example the syllabus, when appropriate.</li>
+          </ul>
+          <p className="mt-2 text-[12px] text-red-800/90">This summary is informational only. Refer to the official policy for requirements and updates.</p>
+        </div>
+      )}
 
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
         <div className="rounded-lg border border-gray-200 bg-gray-50 p-1 shadow-sm">
@@ -175,7 +203,7 @@ export default function UseCaseDetailClient({ caseData }: { caseData: UseCase })
                 const open = p.id ? openNotesIds.has(p.id) : false;
                 return (
                   <div className="space-y-4">
-                    <pre className="text-[13px] text-gray-900 whitespace-pre-wrap font-mono leading-relaxed">{ensureClarifierSuffix(main)}</pre>
+                    <pre className="text-[13px] text-gray-900 whitespace-pre-wrap font-mono leading-relaxed">{renderWithBoldPlaceholders(ensureClarifierSuffix(main))}</pre>
                     {notes && (
                       <div className="border-t border-gray-200 pt-3">
                         <button

@@ -109,6 +109,17 @@ type ViewTab =
   | 'Question Explorer';
 
 export default function AnalyticsPage() {
+  const showAnalytics = process.env.NEXT_PUBLIC_SHOW_ANALYTICS === 'true';
+  if (!showAnalytics) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-6 text-center max-w-md">
+          <h1 className="text-xl font-semibold text-gray-900">Analytics</h1>
+          <p className="mt-2 text-sm text-gray-600">This section is currently hidden.</p>
+        </div>
+      </div>
+    );
+  }
   const [rows, setRows] = useState<Row[]>(SAMPLE_ROWS);
   const [loaded, setLoaded] = useState(false);
   const [view, setView] = useState<ViewTab>('Overview');
@@ -247,7 +258,7 @@ export default function AnalyticsPage() {
         {/* Main content */}
         <section>
           <header className="mb-6">
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">AI in Teaching & Learning –COS Faculty Survey Dashboard</h1>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">AI in Teaching & Learning - COS Faculty Survey Dashboard</h1>
             <blockquote className="mt-3 border-l-4 p-3 text-gray-800 bg-gray-50 border-gray-200">
               This dashboard summarizes faculty responses about how they are using (or not using) AI in teaching and learning.
             </blockquote>
@@ -585,7 +596,7 @@ function QuestionExplorer({ rows }: { rows: Row[] }) {
       const min = Math.min(...nums);
       const max = Math.max(...nums);
       const step = (max - min) / bins || 1;
-      const hist = new Array(bins).fill(0).map((_,i)=>({ name: `${(min + i*step).toFixed(1)}–${(min + (i+1)*step).toFixed(1)}`, value: 0 }));
+      const hist = new Array(bins).fill(0).map((_,i)=>({ name: `${(min + i*step).toFixed(1)}-${(min + (i+1)*step).toFixed(1)}`, value: 0 }));
       for (const n of nums) {
         const idx = Math.min(bins-1, Math.max(0, Math.floor((n - min)/step)));
         hist[idx].value += 1;

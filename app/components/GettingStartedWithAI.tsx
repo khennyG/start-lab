@@ -8,7 +8,7 @@ const GettingStartedWithAI = () => {
       </h1>
       <p className="text-gray-700 text-lg max-w-3xl leading-relaxed">
         This section helps faculty understand the first steps to using AI in
-        teaching — what it is, why it matters, and how it can enhance the
+        teaching - what it is, why it matters, and how it can enhance the
         classroom experience.
       </p>
     </div>

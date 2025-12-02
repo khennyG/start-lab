@@ -66,7 +66,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Biology',
 			contributor: 'Biology Faculty',
 			prompt:
-				'You are a biology lab instructor designing an inquiry-based lab for first-year undergraduates on enzyme kinetics. Provide: 1) Learning objectives aligned to Bloom levels, 2) Pre-lab reading and safety notes, 3) Materials and experimental setup for testing temperature and pH effects on catalase activity, 4) Step-by-step procedure with control and at least two experimental conditions, 5) Data table templates and graphing instructions (rate vs. substrate concentration), 6) Guiding questions for analysis and sources of error, 7) A short post-lab assessment (3 questions) with answer key.'
+				'You are a [biology lab instructor] designing an inquiry-based lab for [first-year undergraduates] on [enzyme kinetics]. Provide: 1) [Learning objectives] aligned to Bloom levels, 2) [Pre-lab reading] and [safety notes], 3) [Materials] and [experimental setup] for testing [temperature] and [pH] effects on [catalase activity], 4) Step-by-step procedure with [control] and at least [two experimental conditions], 5) [Data table templates] and [graphing instructions] (rate vs. [substrate concentration]), 6) [Guiding questions] for analysis and [sources of error], 7) A short [post-lab assessment] (3 questions) with [answer key].'
 		},
 		{
 			id: 2,
@@ -74,7 +74,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Chemistry and Chemical Biology',
 			contributor: 'Chemistry Faculty',
 			prompt:
-				'You are an introductory chemistry problem author. Create a multi-part stoichiometry problem involving limiting reagents and percent yield for the reaction between aluminum and copper(II) sulfate. Include: 1) Problem context and balanced equation, 2) Three sub-questions escalating in difficulty, 3) Complete solutions with units and significant figures, 4) A common-mistakes section explaining typical errors and how to avoid them.'
+				'You are an [introductory chemistry problem author]. Create a [multi-part stoichiometry problem] involving [limiting reagents] and [percent yield] for the reaction between [aluminum] and [copper(II) sulfate]. Include: 1) [Problem context] and [balanced equation], 2) [Three sub-questions] escalating in difficulty, 3) [Complete solutions] with [units] and [significant figures], 4) A [common-mistakes section] explaining typical errors and how to avoid them.'
 		},
 		{
 			id: 3,
@@ -82,7 +82,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Physics',
 			contributor: 'Physics Faculty',
 			prompt:
-				'You are a physics concept coach. Develop a conceptual tutorial on energy conservation vs. non-conservative work for algebra-based physics. Provide: 1) Intuitive explanation with everyday analogies, 2) A worked example (block-spring with friction), 3) Three practice problems (qualitative + quantitative) with solutions, 4) A quick diagnostic to detect the misconception “energy is used up,” and 5) A short reflection prompt for students.'
+				'You are a [physics concept coach]. Develop a conceptual tutorial on [energy conservation vs. non-conservative work] for [algebra-based physics]. Provide: 1) [Intuitive explanation] with [everyday analogies], 2) A [worked example] ([block-spring with friction]), 3) [Three practice problems] (qualitative + quantitative) with [solutions], 4) A [quick diagnostic] to detect the misconception [“energy is used up”], and 5) A short [reflection prompt] for students.'
 		},
 		{
 			id: 4,
@@ -90,7 +90,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Mathematics',
 			contributor: 'Math Faculty',
 			prompt:
-				'You are a mathematics proof tutor. Create a guided worksheet to help students prove that the square root of 2 is irrational. Include: 1) Prior knowledge checklist, 2) Definitions and the law of the excluded middle, 3) A scaffolded proof by contradiction with hints, 4) A common pitfalls section, 5) An extension: generalize to √p for prime p (optional challenge).'
+				'You are a [mathematics proof tutor]. Create a guided worksheet to help students prove [that the square root of 2 is irrational]. Include: 1) [Prior knowledge checklist], 2) [Definitions] and [the law of the excluded middle], 3) A [scaffolded proof by contradiction] with [hints], 4) A [common pitfalls] section, 5) An extension: generalize to [√p for prime p] (optional challenge).'
 		},
 		{
 			id: 7,
@@ -98,7 +98,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Marine and Environmental Sciences',
 			contributor: 'EnvSci Faculty',
 			prompt:
-				'You are a marine & environmental science case writer. Create a case study on coastal erosion management for a small town. Include: 1) Background and local data (rates of erosion, habitat impacts), 2) Stakeholders and constraints (budget, regulations), 3) Three intervention options (hard/soft/managed retreat) with pros/cons, 4) Cost-benefit summary table, 5) Discussion questions and a short decision memo template.'
+				'You are a [marine & environmental science case writer]. Create a case study on [coastal erosion management] for a [small town]. Include: 1) [Background] and [local data] ([rates of erosion], [habitat impacts]), 2) [Stakeholders] and [constraints] ([budget], [regulations]), 3) [Three intervention options] ([hard]/[soft]/[managed retreat]) with [pros/cons], 4) [Cost-benefit summary table], 5) [Discussion questions] and a short [decision memo template].'
 		},
 		{
 			id: 9,
@@ -106,7 +106,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Chemistry and Chemical Biology',
 			contributor: 'Chemistry Faculty',
 			prompt:
-				'You are an organic chemistry tutor. Develop a mechanism walkthrough for E1 vs. E2 eliminations. Include: 1) Decision tree based on substrate, base, solvent, temperature, 2) Detailed arrow-pushing for representative examples, 3) Common pitfalls (rearrangements, Zaitsev vs. Hofmann), 4) Three practice problems with solutions.'
+				'You are an [organic chemistry tutor]. Develop a mechanism walkthrough for [E1 vs. E2 eliminations]. Include: 1) [Decision tree] based on [substrate], [base], [solvent], [temperature], 2) [Detailed arrow-pushing] for [representative examples], 3) [Common pitfalls] ([rearrangements], [Zaitsev vs. Hofmann]), 4) [Three practice problems] with [solutions].'
 		},
 		{
 			id: 10,
@@ -114,7 +114,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Biology',
 			contributor: 'Writing Across STEM',
 			prompt:
-				'You are a scientific writing coach. Provide a revision checklist for the Introduction and Discussion sections of a biology lab report on enzyme activity. Include: 1) How to motivate the question using literature, 2) Claims-evidence-reasoning alignment, 3) Integrating figures/tables, 4) Common phrasing issues and how to fix them, 5) A short model paragraph annotated for clarity.'
+				'You are a [scientific writing coach]. Provide a [revision checklist] for the [Introduction] and [Discussion] sections of a [biology lab report] on [enzyme activity]. Include: 1) How to [motivate the question] using [literature], 2) [Claims‑evidence‑reasoning alignment], 3) Integrating [figures/tables], 4) [Common phrasing issues] and how to fix them, 5) A short [model paragraph] annotated for [clarity].'
 		},
 		{
 			id: 11,
@@ -122,7 +122,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Physics',
 			contributor: 'Physics Faculty',
 			prompt:
-				'You are a quantum mechanics instructor. Create a problem set on the particle in a 1D infinite potential well. Provide: 1) A derivation outline (boundary conditions → eigenfunctions), 2) Three problems (energy levels, expectation values, superposition), 3) Detailed solutions, 4) A conceptual checkpoint addressing the “electron-in-orbit” misconception.'
+				'You are a [quantum mechanics instructor]. Create a [problem set] on the [particle in a 1D infinite potential well]. Provide: 1) A [derivation outline] ([boundary conditions] → [eigenfunctions]), 2) [Three problems] ([energy levels], [expectation values], [superposition]), 3) [Detailed solutions], 4) A [conceptual checkpoint] addressing the [“electron‑in‑orbit” misconception].'
 		},
 		{
 			id: 12,
@@ -130,7 +130,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Mathematics',
 			contributor: 'Math Faculty',
 			prompt:
-				'You are a discrete mathematics coach. Design a mini-lesson on graphs and connectivity. Include: 1) Definitions (walk, path, cycle, connected), 2) Examples and non-examples, 3) Two proofs (one by contrapositive) about connectivity, 4) An algorithmic exercise (BFS/DFS) with pseudocode, 5) A short reflection question linking to real-world networks.'
+				'You are a [discrete mathematics coach]. Design a [mini‑lesson] on [graphs and connectivity]. Include: 1) [Definitions] ([walk], [path], [cycle], [connected]), 2) [Examples] and [non‑examples], 3) [Two proofs] (one by [contrapositive]) about [connectivity], 4) An [algorithmic exercise] ([BFS/DFS]) with [pseudocode], 5) A short [reflection question] linking to [real‑world networks].'
 		},
 		{
 			id: 14,
@@ -138,7 +138,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Mathematics',
 			contributor: 'Applied Math Faculty',
 			prompt:
-				'You are a numerical methods instructor. Create a worksheet comparing bisection, Newton–Raphson, and secant methods. Provide: 1) Convergence conditions, 2) Error bounds/estimates, 3) A worked example for each, 4) Pseudocode, 5) When each method is preferable in practice.'
+				'You are a [numerical methods instructor]. Create a [worksheet] comparing [bisection], [Newton‑Raphson], and [secant] methods. Provide: 1) [Convergence conditions], 2) [Error bounds/estimates], 3) A [worked example] for each, 4) [Pseudocode], 5) When each method is [preferable in practice].'
 		},
 		// New COS prompts (20)
 		{
@@ -147,7 +147,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Biology',
 			contributor: 'Biology Faculty',
 			prompt:
-				'You are a field ecology planner. Design a sampling plan to estimate plant species richness across a coastal dune gradient. Include: 1) Hypothesis and response variables, 2) Stratified random sampling layout with plot size/spacing, 3) Minimum sample size justified via pilot data or power reasoning, 4) Data sheet template, 5) Brief QA/QC and bias mitigation steps, 6) Analysis outline (Shannon index, rarefaction, ANOVA/Kruskal–Wallis), 7) Safety and permit considerations.'
+				'You are a [field ecology planner]. Design a [sampling plan] to estimate [plant species richness] across a [coastal dune gradient]. Include: 1) [Hypothesis] and [response variables], 2) [Stratified random sampling layout] with [plot size/spacing], 3) [Minimum sample size] justified via [pilot data] or [power reasoning], 4) [Data sheet template], 5) Brief [QA/QC] and [bias mitigation steps], 6) [Analysis outline] ([Shannon index], [rarefaction], [ANOVA/Kruskal‑Wallis]), 7) [Safety] and [permit considerations].'
 		},
 		{
 			id: 16,
@@ -155,7 +155,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Biology',
 			contributor: 'Molecular Biology Faculty',
 			prompt:
-				'You are designing a CRISPR-based knockout experiment in yeast to study gene X involved in galactose metabolism. Provide: 1) gRNA selection criteria and two candidate sequences, 2) Donor template design (with homology arms) for HDR vs. NHEJ strategy, 3) Transformation workflow and controls, 4) Genotyping plan (PCR, Sanger), 5) Phenotypic assay and expected outcomes, 6) Troubleshooting tips for off-targets and low editing efficiency.'
+				'You are designing a [CRISPR‑based knockout experiment] in [yeast] to study [gene X] involved in [galactose metabolism]. Provide: 1) [gRNA selection criteria] and [two candidate sequences], 2) [Donor template design] (with [homology arms]) for [HDR] vs. [NHEJ] strategy, 3) [Transformation workflow] and [controls], 4) [Genotyping plan] ([PCR], [Sanger]), 5) [Phenotypic assay] and [expected outcomes], 6) [Troubleshooting tips] for [off‑targets] and [low editing efficiency].'
 		},
 		{
 			id: 17,
@@ -163,15 +163,15 @@ export default function PromptsAltSciencePage() {
 			category: 'Biology',
 			contributor: 'Microbiology Faculty',
 			prompt:
-				'Author a short case study on an outbreak of carbapenem-resistant Enterobacteriaceae in a hospital ward. Include: 1) Background and transmission routes, 2) Lab diagnostics decision tree (culture → MALDI-TOF → MIC), 3) Infection control options and trade-offs, 4) Three discussion questions and an answer key, 5) A short communication plan for non-technical stakeholders.'
+				'Author a [short case study] on an outbreak of [carbapenem‑resistant Enterobacteriaceae] in a [hospital ward]. Include: 1) [Background] and [transmission routes], 2) [Lab diagnostics decision tree] ([culture] → [MALDI‑TOF] → [MIC]), 3) [Infection control options] and [trade‑offs], 4) [Three discussion questions] and an [answer key], 5) A short [communication plan] for [non‑technical stakeholders].'
 		},
 		{
 			id: 18,
-			title: 'Act as a Bioinformatics Workflow Coach (RNA‑seq)',
+			title: 'Act as a Bioinformatics Workflow Coach (RNA-seq)',
 			category: 'Biology',
 			contributor: 'Bioinformatics Core',
 			prompt:
-				'Outline an RNA‑seq analysis workflow for differential expression between treated and control cell lines. Include: 1) QC (FastQC, trimming) and alignment vs. pseudoalignment rationale, 2) Count matrix generation, 3) Normalization and differential testing (DESeq2/edgeR) with assumptions, 4) Multiple testing correction and volcano plot, 5) Functional enrichment (GO/KEGG) with caveats, 6) Reproducible report checklist.'
+				'Outline an [RNA‑seq analysis workflow] for [differential expression] between [treated] and [control] cell lines. Include: 1) [QC] ([FastQC], [trimming]) and [alignment vs. pseudoalignment rationale], 2) [Count matrix generation], 3) [Normalization] and [differential testing] ([DESeq2]/[edgeR]) with [assumptions], 4) [Multiple testing correction] and [volcano plot], 5) [Functional enrichment] ([GO]/[KEGG]) with [caveats], 6) [Reproducible report checklist].'
 		},
 		{
 			id: 19,
@@ -179,23 +179,23 @@ export default function PromptsAltSciencePage() {
 			category: 'Chemistry and Chemical Biology',
 			contributor: 'Chemistry Lab Coordinator',
 			prompt:
-				'Design a constant‑pressure calorimetry lab to determine the enthalpy of neutralization for a strong acid–strong base reaction. Include: 1) Learning objectives and safety, 2) Equipment and calibration steps, 3) Procedure with replicate trials and heat loss corrections, 4) Data tables and sample calculations with units and sig figs, 5) Error analysis (systematic vs random), 6) Pre‑lab and post‑lab questions with keys.'
+				'Design a [constant‑pressure calorimetry lab] to determine the [enthalpy of neutralization] for a [strong acid‑strong base reaction]. Include: 1) [Learning objectives] and [safety], 2) [Equipment] and [calibration steps], 3) [Procedure] with [replicate trials] and [heat loss corrections], 4) [Data tables] and [sample calculations] with [units] and [sig figs], 5) [Error analysis] ([systematic] vs [random]), 6) [Pre‑lab] and [post‑lab questions] with [keys].'
 		},
 		{
 			id: 20,
-			title: 'Act as an Acid–Base Titration Coach',
+			title: 'Act as an Acid-Base Titration Coach',
 			category: 'Chemistry and Chemical Biology',
 			contributor: 'Chemistry Faculty',
 			prompt:
-				'Create a tutorial to interpret titration curves for monoprotic and diprotic acids. Provide: 1) Key equations and concepts (buffer region, equivalence, Henderson–Hasselbalch), 2) Example curves with annotations, 3) Practice problems (strong/weak combinations) with solutions, 4) Common pitfalls (indicator choice, dilution effects) and how to avoid them.'
+				'Create a [tutorial] to interpret [titration curves] for [monoprotic] and [diprotic acids]. Provide: 1) [Key equations and concepts] ([buffer region], [equivalence], [Henderson‑Hasselbalch]), 2) [Example curves] with [annotations], 3) [Practice problems] ([strong/weak combinations]) with [solutions], 4) [Common pitfalls] ([indicator choice], [dilution effects]) and how to avoid them.'
 		},
 		{
 			id: 21,
-			title: 'Act as a Spectroscopy Analyst (UV‑Vis)',
+			title: 'Act as a Spectroscopy Analyst (UV-Vis)',
 			category: 'Chemistry and Chemical Biology',
 			contributor: 'Analytical Chemistry Faculty',
 			prompt:
-				'Prepare a Beer–Lambert calibration activity to quantify food dye concentration. Include: 1) Wavelength selection and baseline correction, 2) Standards preparation and linear range check, 3) Data recording template, 4) Linear regression with residual checks, 5) Unknown sample calculation with uncertainty, 6) Two sources of systematic error and mitigation.'
+				'Prepare a [Beer‑Lambert calibration activity] to quantify [food dye concentration]. Include: 1) [Wavelength selection] and [baseline correction], 2) [Standards preparation] and [linear range check], 3) [Data recording template], 4) [Linear regression] with [residual checks], 5) [Unknown sample calculation] with [uncertainty], 6) [Two sources of systematic error] and [mitigation].'
 		},
 		{
 			id: 22,
@@ -203,7 +203,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Chemistry and Chemical Biology',
 			contributor: 'Physical Chemistry Faculty',
 			prompt:
-				'Create a guided problem set using temperature‑dependent rate data to extract activation energy via the Arrhenius equation. Include: 1) Data table, 2) Linearization steps and plot axes, 3) Worked example with units, 4) Interpretation questions connecting mechanism and steric/electronic effects, 5) A short extension to catalysis.'
+				'Create a [guided problem set] using [temperature‑dependent rate data] to extract [activation energy] via the [Arrhenius equation]. Include: 1) [Data table], 2) [Linearization steps] and [plot axes], 3) [Worked example] with [units], 4) [Interpretation questions] connecting [mechanism] and [steric/electronic effects], 5) A short [extension to catalysis].'
 		},
 		{
 			id: 23,
@@ -211,7 +211,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Physics',
 			contributor: 'Physics Lab Coordinator',
 			prompt:
-				'Design a projectile motion lab using video analysis. Include: 1) Learning objectives and safety, 2) Setup and calibration (scale bar, frame rate), 3) Data collection plan with trials at varying launch angles, 4) Data extraction and uncertainty propagation, 5) Comparison to model (air resistance discussion), 6) Post‑lab questions and rubric.'
+				'Design a [projectile motion lab] using [video analysis]. Include: 1) [Learning objectives] and [safety], 2) [Setup] and [calibration] ([scale bar], [frame rate]), 3) [Data collection plan] with trials at [varying launch angles], 4) [Data extraction] and [uncertainty propagation], 5) [Comparison to model] ([air resistance discussion]), 6) [Post‑lab questions] and [rubric].'
 		},
 		{
 			id: 24,
@@ -219,7 +219,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Physics',
 			contributor: 'Physics Faculty',
 			prompt:
-				'Write a mini‑lesson on RC circuit transients. Include: 1) Differential equation and solution forms, 2) Time constant intuition, 3) Worked examples for charging and discharging, 4) Three practice problems with graphs and solutions, 5) Measurement considerations with oscilloscopes.'
+				'Write a [mini‑lesson] on [RC circuit transients]. Include: 1) [Differential equation] and [solution forms], 2) [Time constant] intuition, 3) [Worked examples] for [charging] and [discharging], 4) [Three practice problems] with [graphs] and [solutions], 5) [Measurement considerations] with [oscilloscopes].'
 		},
 		{
 			id: 25,
@@ -227,7 +227,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Physics',
 			contributor: 'Physics Faculty',
 			prompt:
-				'Develop a guided activity on thin lens imaging. Include: 1) Ray diagram primer, 2) Lab procedure to measure focal length and magnification, 3) Data table template, 4) Error analysis (parallax, alignment), 5) Conceptual questions distinguishing real vs. virtual images, 6) A short extension to lens systems.'
+				'Develop a [guided activity] on [thin lens imaging]. Include: 1) [Ray diagram primer], 2) [Lab procedure] to measure [focal length] and [magnification], 3) [Data table template], 4) [Error analysis] ([parallax], [alignment]), 5) [Conceptual questions] distinguishing [real] vs. [virtual images], 6) A short [extension to lens systems].'
 		},
 		{
 			id: 26,
@@ -235,7 +235,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Physics',
 			contributor: 'Physics Faculty',
 			prompt:
-				'Create a conceptual walkthrough linking microstates to the ideal gas law. Include: 1) Assumptions of the model, 2) Derivation outline (equipartition), 3) Thought experiments to build intuition, 4) Two quick numerical checks, 5) Reflection prompts about when the model breaks down.'
+				'Create a [conceptual walkthrough] linking [microstates] to the [ideal gas law]. Include: 1) [Assumptions of the model], 2) [Derivation outline] ([equipartition]), 3) [Thought experiments] to build [intuition], 4) [Two quick numerical checks], 5) [Reflection prompts] about when the model breaks down.'
 		},
 		{
 			id: 27,
@@ -243,7 +243,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Mathematics',
 			contributor: 'Math Faculty',
 			prompt:
-				'Create a worksheet that builds intuition for eigenvalues/eigenvectors and connects them to PCA. Include: 1) Geometric interpretation in 2D with sketches, 2) A small dataset and covariance matrix, 3) Step‑by‑step PCA by hand for two components, 4) Interpretation of loadings and variance explained, 5) Two common pitfalls and checks.'
+				'Create a [worksheet] that builds [intuition] for [eigenvalues/eigenvectors] and connects them to [PCA]. Include: 1) [Geometric interpretation] in [2D] with [sketches], 2) A [small dataset] and [covariance matrix], 3) [Step‑by‑step PCA] by hand for [two components], 4) [Interpretation of loadings] and [variance explained], 5) [Two common pitfalls] and [checks].'
 		},
 		{
 			id: 28,
@@ -251,7 +251,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Mathematics',
 			contributor: 'Math Faculty',
 			prompt:
-				'Produce a guided note set on constrained optimization with Lagrange multipliers. Include: 1) Setup and intuition, 2) A worked example with one constraint, 3) A second example with two constraints and classification of extrema, 4) Practice problems with solutions, 5) Common mistakes (ignoring boundary, misinterpreting λ).' 
+				'Produce a [guided note set] on [constrained optimization] with [Lagrange multipliers]. Include: 1) [Setup] and [intuition], 2) A [worked example] with [one constraint], 3) A [second example] with [two constraints] and [classification of extrema], 4) [Practice problems] with [solutions], 5) [Common mistakes] ([ignoring boundary], [misinterpreting λ]).'
 		},
 		{
 			id: 29,
@@ -259,7 +259,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Mathematics',
 			contributor: 'Statistics Faculty',
 			prompt:
-				'Develop a Bayes theorem lesson using a medical testing scenario. Include: 1) Clear definition of events with a tree diagram, 2) Worked example with sensitivity/specificity and prevalence, 3) Visual frequency table method, 4) Two practice problems with solutions, 5) A short section on base‑rate neglect.'
+				'Develop a [Bayes theorem lesson] using a [medical testing scenario]. Include: 1) [Clear definition of events] with a [tree diagram], 2) [Worked example] with [sensitivity/specificity] and [prevalence], 3) [Visual frequency table] method, 4) [Two practice problems] with [solutions], 5) A short section on [base‑rate neglect].'
 		},
 		{
 			id: 30,
@@ -267,7 +267,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Mathematics',
 			contributor: 'Applied Math Faculty',
 			prompt:
-				'Create a mini‑project around the SIR epidemic model. Include: 1) Model equations and parameter meanings, 2) Qualitative analysis (equilibria, R0), 3) Simple numerical simulation steps, 4) How to fit parameters from data, 5) Reflection on assumptions and limitations.'
+				'Create a [mini‑project] around the [SIR epidemic model]. Include: 1) [Model equations] and [parameter meanings], 2) [Qualitative analysis] ([equilibria], [R0]), 3) [Simple numerical simulation steps], 4) How to [fit parameters] from [data], 5) [Reflection] on [assumptions] and [limitations].'
 		},
 		{
 			id: 31,
@@ -275,7 +275,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Marine and Environmental Sciences',
 			contributor: 'Environmental Data Science Faculty',
 			prompt:
-				'Outline a lab analyzing sea surface temperature anomalies. Include: 1) Data sourcing and citation (NOAA), 2) Detrending and seasonal decomposition, 3) Anomaly definition and visualization, 4) Simple change‑point detection, 5) Interpretation questions and uncertainty discussion, 6) Communication tips for non‑experts.'
+				'Outline a [lab] analyzing [sea surface temperature anomalies]. Include: 1) [Data sourcing] and [citation] ([NOAA]), 2) [Detrending] and [seasonal decomposition], 3) [Anomaly definition] and [visualization], 4) [Simple change‑point detection], 5) [Interpretation questions] and [uncertainty discussion], 6) [Communication tips] for [non‑experts].'
 		},
 		{
 			id: 32,
@@ -283,7 +283,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Marine and Environmental Sciences',
 			contributor: 'Environmental Chemistry Faculty',
 			prompt:
-				'Design a monitoring plan to assess nutrient runoff into a freshwater pond. Include: 1) Sampling sites and frequency across seasons, 2) Field and lab methods (NO3‑, PO4^3‑), 3) QA/QC and chain of custody, 4) Data management schema, 5) Visualization and threshold criteria, 6) Policy/management recommendations format.'
+				'Design a [monitoring plan] to assess [nutrient runoff] into a [freshwater pond]. Include: 1) [Sampling sites] and [frequency] across [seasons], 2) [Field] and [lab methods] ([NO3‑], [PO4^3‑]), 3) [QA/QC] and [chain of custody], 4) [Data management schema], 5) [Visualization] and [threshold criteria], 6) [Policy/management recommendations] format.'
 		},
 		{
 			id: 33,
@@ -291,7 +291,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Psychology',
 			contributor: 'Psychology Faculty',
 			prompt:
-				'Create a lab exercise around the Stroop effect. Include: 1) Operational definitions of IV/DV, 2) Within‑ vs. between‑subjects design choice with rationale, 3) Counterbalancing and exclusion criteria, 4) Data collection template, 5) Analysis plan (paired t‑test or repeated‑measures ANOVA) and effect size, 6) Ethics and debriefing notes.'
+				'Create a [lab exercise] around the [Stroop effect]. Include: 1) [Operational definitions] of [IV/DV], 2) [Within‑] vs. [between‑subjects] [design choice] with [rationale], 3) [Counterbalancing] and [exclusion criteria], 4) [Data collection template], 5) [Analysis plan] ([paired t‑test] or [repeated‑measures ANOVA]) and [effect size], 6) [Ethics] and [debriefing notes].'
 		},
 		{
 			id: 34,
@@ -299,7 +299,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Psychology',
 			contributor: 'Psychology Faculty',
 			prompt:
-				'Provide a template and examples for writing APA‑style results for a one‑way ANOVA with post‑hoc tests. Include: 1) Reporting format with exact statistics, 2) Effect sizes and confidence intervals, 3) Assumption checks and alternatives, 4) A short example paragraph using realistic numbers, 5) Common phrasing to avoid.'
+				'Provide a [template] and [examples] for writing [APA‑style results] for a [one‑way ANOVA] with [post‑hoc tests]. Include: 1) [Reporting format] with [exact statistics], 2) [Effect sizes] and [confidence intervals], 3) [Assumption checks] and [alternatives], 4) A short [example paragraph] using [realistic numbers], 5) [Common phrasing] to avoid.'
 		},
 		{
 			id: 35,
@@ -315,7 +315,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Psychology',
 			contributor: 'Cognitive Psychology Faculty',
 			prompt:
-				'Design a laboratory experiment to measure working memory using an operation span task. Include: 1) Hypotheses and IV/DV definitions (load levels; accuracy/RT), 2) Trial structure and stimuli with counterbalancing, 3) Exclusion criteria and power/sample size rationale, 4) Procedure script and timing diagram, 5) Data dictionary and analysis plan (mixed ANOVA, effect size), 6) Expected patterns and interpretation, 7) Ethics and debriefing notes.'
+				'Design a [laboratory experiment] to measure [working memory] using an [operation span task]. Include: 1) [Hypotheses] and [IV/DV definitions] ([load levels]; [accuracy/RT]), 2) [Trial structure] and [stimuli] with [counterbalancing], 3) [Exclusion criteria] and [power/sample size rationale], 4) [Procedure script] and [timing diagram], 5) [Data dictionary] and [analysis plan] ([mixed ANOVA], [effect size]), 6) [Expected patterns] and [interpretation], 7) [Ethics] and [debriefing notes].'
 		},
 		{
 			id: 37,
@@ -323,7 +323,7 @@ export default function PromptsAltSciencePage() {
 			category: 'Psychology',
 			contributor: 'Clinical Psychology Faculty',
 			prompt:
-				'Provide a CBT case formulation and treatment plan using the five‑areas model for a client with depressive symptoms. Include: 1) Presenting problems and functional analysis, 2) Precipitating, perpetuating, and protective factors, 3) Measurable goals and session structure, 4) Intervention components (behavioral activation, cognitive restructuring) with concrete homework, 5) Outcome measures and progress tracking, 6) Risk assessment and referral/consultation plan.'
+				'Provide a [CBT case formulation] and [treatment plan] using the [five‑areas model] for a [client with depressive symptoms]. Include: 1) [Presenting problems] and [functional analysis], 2) [Precipitating], [perpetuating], and [protective factors], 3) [Measurable goals] and [session structure], 4) [Intervention components] ([behavioral activation], [cognitive restructuring]) with [concrete homework], 5) [Outcome measures] and [progress tracking], 6) [Risk assessment] and [referral/consultation plan].'
 		}
 	] as const), []);
 
@@ -339,8 +339,20 @@ export default function PromptsAltSciencePage() {
 		})
 	}, [searchQuery, selectedCategory, prompts])
 
+	// Remove bracket placeholders for display and copy
+	const cleanBrackets = (text: string) => text.replace(/\[/g, '').replace(/\]/g, '')
+
+	// Format numbered sections to start on new lines for readability
+	const formatPromptForDisplay = (text: string) => {
+		return cleanBrackets(text)
+			// Insert a newline before any numbered point like " 1)" ... " 9)"
+			.replace(/\s([1-9]\))/g, '\n$1')
+			// Also handle em-dash or repeated spaces before numbers, just in case
+			.replace(/\s+([1-9]\))/g, '\n$1');
+	}
+
 	const copyToClipboard = (text: string, id: number) => {
-		navigator.clipboard.writeText(text)
+		navigator.clipboard.writeText(cleanBrackets(text))
 		setCopiedId(id)
 		setTimeout(() => setCopiedId(null), 1600)
 	}
@@ -359,10 +371,10 @@ export default function PromptsAltSciencePage() {
 		<div className="min-h-screen bg-gray-50">
 			{/* Header */}
 			<header className="max-w-7xl mx-auto px-6 pt-10 pb-6 text-center">
-				<h1 className="text-3xl font-bold text-gray-900">Prompt Library (Alt)</h1>
+				<h1 className="text-3xl font-bold text-red-700">Quick Prompts</h1>
 				<p className="mt-3 text-gray-700 max-w-3xl mx-auto text-base">
-					A curated set of ready‑to‑use prompts for teaching, research, and labs across College of Science disciplines.
-					Search, filter by category, and open any card to view and copy the full prompt.
+					Quick, copy-ready prompts that are shorter and less detailed than the main Prompt Library.
+					Search or filter, then open a card to copy the prompt.
 				</p>
 			</header>
 
@@ -430,7 +442,7 @@ export default function PromptsAltSciencePage() {
 									<h3 className="text-xl font-bold text-gray-900">{p.title}</h3>
 								</div>
 								<div className="p-6 flex-grow">
-									<p className="text-sm text-gray-700 leading-relaxed line-clamp-4">{snippet}</p>
+									<p className="text-sm text-gray-700 leading-relaxed line-clamp-4">{formatPromptForDisplay(snippet)}</p>
 								</div>
 								<div className="p-4 bg-gray-50 border-t border-gray-100">
 									<span className="text-xs text-red-600 font-medium">Click to view</span>
@@ -467,7 +479,7 @@ export default function PromptsAltSciencePage() {
 						</div>
 						<div className="p-6">
 							<div className="bg-gray-50 rounded-lg p-5 max-h-[60vh] overflow-y-auto">
-								<p className="text-sm text-gray-800 leading-relaxed whitespace-pre-wrap">{activePrompt.prompt}</p>
+								<p className="text-sm text-gray-800 leading-relaxed whitespace-pre-wrap">{formatPromptForDisplay(activePrompt.prompt)}</p>
 							</div>
 						</div>
 						<div className="px-6 pb-6">
