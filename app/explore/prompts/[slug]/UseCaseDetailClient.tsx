@@ -114,7 +114,7 @@ export default function UseCaseDetailClient({ caseData }: { caseData: UseCase })
       </div>
 
       <header className="mb-5">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-2">{caseData.title}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-[#CC0000] mb-2">{caseData.title}</h1>
         <p className="text-gray-700 md:text-lg">{caseData.description}</p>
       </header>
 
@@ -139,16 +139,16 @@ export default function UseCaseDetailClient({ caseData }: { caseData: UseCase })
       )}
 
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-        <div className="rounded-lg border border-gray-200 bg-gray-50 p-1 shadow-sm">
+        <div className="rounded-lg border border-red-600 bg-red-100 p-1 shadow-sm">
           <button
             onClick={() => setActiveTab('general')}
-            className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${activeTab === 'general' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900'}`}
+            className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${activeTab === 'general' ? 'bg-white text-red-800 shadow-sm' : 'text-red-800/80 hover:text-red-900'}`}
           >
             General prompts
           </button>
           <button
             onClick={() => setActiveTab('discipline')}
-            className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${activeTab === 'discipline' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900'}`}
+            className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${activeTab === 'discipline' ? 'bg-white text-red-800 shadow-sm' : 'text-red-800/80 hover:text-red-900'}`}
           >
             Discipline-specific
           </button>
