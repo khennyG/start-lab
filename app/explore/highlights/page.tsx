@@ -34,6 +34,7 @@ export default function FacultyHighlightsPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900">Prof. Ana Otero</h3>
               <p className="mt-1 text-sm text-gray-600">Department of Biology</p>
+<<<<<<< HEAD
               <h4 className="mt-4 text-lg font-semibold text-[#CC0000]">BioQuizzer: AI-Powered Practice Tool</h4>
                 <p className="mt-2 text-gray-700 text-sm leading-relaxed">
                   In the Department of Biology, Prof. Ana Otero designed <span className="font-medium">BioQuizzer</span> - an AI-powered study companion built with Claude. The app gives her students a space to practice multiple-choice questions that mirror the style and rigor of her exams. Each question is generated and organized using Bloom’s taxonomy, so students move from basic recall to higher-order reasoning as they study. The quizzer adjusts difficulty based on performance and integrates immediate feedback to help students recognize and correct misconceptions early. What makes it especially powerful is the built-in chat with Claude: while taking practice quizzes, students can pause to ask for explanations, unpack why an answer is correct or not, and explore related ideas in real time. It turns passive studying into a guided conversation, helping students think more critically, not just memorize.
@@ -71,6 +72,7 @@ export default function FacultyHighlightsPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900">Prof. Rangoli Goyal</h3>
               <p className="mt-1 text-sm text-gray-600">Department of Mathematics</p>
+<<<<<<< HEAD
               <h4 className="mt-4 text-lg font-semibold text-[#CC0000]">MathQuizzer: Practice for Calculus I & II</h4>
                 <p className="mt-2 text-gray-700 text-sm leading-relaxed">
                   In Mathematics, Prof. Rangoli Goyal is taking a similar approach with <span className="font-medium">MathQuizzer</span>, also powered by Claude, to support her students in Calculus I and II. The app allows students to select any topic - limits, derivatives, or integrals - and instantly generates new problem sets at varying levels of difficulty. Students can attempt problems step by step, request structured hints when they get stuck, and compare their methods with fully worked solutions at the end. A built-in “Math Buddy” chat, again supported by Claude, gives students a chance to ask conceptual questions during practice, encouraging understanding before shortcuts. By combining adaptability with conversational support, MathQuizzer makes independent practice feel more like collaborative tutoring.
@@ -111,6 +113,9 @@ export default function FacultyHighlightsPage() {
               <h4 className="mt-4 text-lg font-semibold text-[#CC0000]">Ada: AI Chatbot for Calculus Support</h4>
               <p className="mt-2 text-gray-700 text-sm leading-relaxed">
                 In Calculus for Life Sciences, Prof. Abby Williams uses &quot;Ada,&quot; a custom ChatGPT-powered chatbot developed by Prof. Nik Bear Brown and graduate student Dev Shah. The chatbot gives students 24/7 access to homework help. Students can type in a problem or upload a photo of it, and Ada walks them through the solution step by step. Since textbooks often show only one correct answer format, Ada helps students check both their answers and their problem-solving process. Students also use Ada to generate practice problems for midterms and finals. Weekly quizzes are based on homework, so Ada fits naturally into how students already study. Student feedback has been positive, with many noting they appreciated learning how to use AI as a genuine study tool.
+              <h4 className="mt-4 text-lg font-semibold text-[#CC0000]">Ada: AI Chatbot for Calculus Support</h4>
+              <p className="mt-2 text-gray-700 text-sm leading-relaxed">
+                In Calculus for Life Sciences, Prof. Abby Williams uses &quot;Ada,&quot; a custom ChatGPT-powered chatbot developed by Prof. Nik Bear Brown and graduate student Dev Shah. The chatbot gives students 24/7 access to homework help. Students can type in a problem or upload a photo of it, and Ada walks them through the solution step by step. Since textbooks often show only one correct answer format, Ada helps students check both their answers and their problem-solving process. Students also use Ada to generate practice problems for midterms and finals. Weekly quizzes are based on homework, so Ada fits naturally into how students already study. Student feedback has been positive, with many noting they appreciated learning how to use AI as a genuine study tool.
               </p>
               <div className="mt-6">
                 <a
@@ -145,6 +150,7 @@ export default function FacultyHighlightsPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900">Prof. He Wang</h3>
               <p className="mt-1 text-sm text-gray-600">Department of Applied Mathematics</p>
+<<<<<<< HEAD
               <h4 className="mt-4 text-lg font-semibold text-[#CC0000]">ChatGPT as a Coding Partner in Applied Math</h4>
               <p className="mt-2 text-gray-700 text-sm leading-relaxed">
                 In Applied Math for Data Science and Machine Learning, Prof. He Wang has students use ChatGPT, GitHub Copilot, or Llama to help with coding. Students first solve real-world math problems on their own using their understanding of mathematical theory. Then they prompt the AI to generate code in R, Python, or MATLAB, and evaluate whether the response is correct. This lets students focus on the math and the logic of their programming rather than getting stuck on syntax. Grading emphasizes the math, not the code, reinforcing that AI handles computation while students own the critical thinking.
