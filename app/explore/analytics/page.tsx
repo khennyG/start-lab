@@ -110,16 +110,6 @@ type ViewTab =
 
 export default function AnalyticsPage() {
   const showAnalytics = process.env.NEXT_PUBLIC_SHOW_ANALYTICS === 'true';
-  if (!showAnalytics) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-6 text-center max-w-md">
-          <h1 className="text-xl font-semibold text-gray-900">Analytics</h1>
-          <p className="mt-2 text-sm text-gray-600">This section is currently hidden.</p>
-        </div>
-      </div>
-    );
-  }
   const [rows, setRows] = useState<Row[]>(SAMPLE_ROWS);
   const [loaded, setLoaded] = useState(false);
   const [view, setView] = useState<ViewTab>('Overview');
@@ -238,6 +228,14 @@ export default function AnalyticsPage() {
   return (
     <div className={`${poppins.className} min-h-screen bg-gray-50`}>
       <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 lg:grid-cols-[240px_minmax(0,1fr)] gap-6">
+        {!showAnalytics ? (
+          <div className="lg:col-span-2 min-h-[40vh] flex items-center justify-center">
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-6 text-center max-w-md">
+              <h1 className="text-xl font-semibold text-gray-900">Analytics</h1>
+              <p className="mt-2 text-sm text-gray-600">This section is currently hidden.</p>
+            </div>
+          </div>
+        ) : (
         {/* Sidebar (tabs) */}
         <aside className="bg-white border border-gray-200 rounded-xl shadow-sm p-4 h-fit sticky top-6 self-start">
           <h3 className="text-sm font-semibold mb-2 text-gray-800">Explore Options</h3>
@@ -459,6 +457,7 @@ export default function AnalyticsPage() {
             )}
           </footer>
         </section>
+        )}
       </div>
     </div>
   );
