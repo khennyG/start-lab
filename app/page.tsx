@@ -41,7 +41,7 @@ export default function Home(){
           </span>
         </h1>
         <p className="text-gray-700 text-[1.02rem] italic leading-[1.85] tracking-[0.02em] md:tracking-[0.035em] mb-10 max-w-3xl md:max-w-4xl mx-auto text-left">
-          AI is already part of students’ learning. The question is not <span className="text-red-600 font-semibold italic">if</span> they’ll use it, but how we as faculty can design teaching that works with it <span className="text-red-600 font-semibold italic">when</span> they do. <span className="text-red-600 font-semibold italic">StartLab</span> is a place to begin. Here, you’ll see different ways to begin thinking about how AI might fit into your teaching — from redesigning assignments, to using AI as a partner in feedback and rubric creation, to exploring new approaches in your discipline. It’s meant to start a conversation — one that invites faculty to share, reflect, and build thoughtful AI-integrated teaching together.
+          AI is already part of students’ learning. The question is not <span className="text-red-600 font-semibold italic">if</span> they’ll use it, but how we as faculty can design teaching that works with it <span className="text-red-600 font-semibold italic">when</span> they do. <span className="text-red-600 font-semibold italic">StartLab</span> is a place to begin. Here, you’ll see different ways to begin thinking about how AI might fit into your teaching, curated and tested for real courses. Copy, paste, and adapt for your context.
         </p>
         <div className="flex justify-center">
           <button
