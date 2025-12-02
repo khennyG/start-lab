@@ -236,6 +236,7 @@ export default function AnalyticsPage() {
             </div>
           </div>
         ) : (
+        <>
         {/* Sidebar (tabs) */}
         <aside className="bg-white border border-gray-200 rounded-xl shadow-sm p-4 h-fit sticky top-6 self-start">
           <h3 className="text-sm font-semibold mb-2 text-gray-800">Explore Options</h3>
@@ -457,6 +458,7 @@ export default function AnalyticsPage() {
             )}
           </footer>
         </section>
+        </>
         )}
       </div>
     </div>
