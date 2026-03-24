@@ -40,7 +40,7 @@ export default function FacultyHighlightsPage() {
                 </p>
               <div className="mt-6">
                 <a
-                  href="https://claude.ai/artifacts/b38e4237-53d7-4a4e-a4ab-66ffae5dfc8e"
+                  href="https://claude.ai/artifacts/5025721b-9d84-4134-a23e-66b9f30e94e4"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-lg bg-red-600 px-4 py-2 text-white font-medium shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
@@ -77,7 +77,7 @@ export default function FacultyHighlightsPage() {
                 </p>
               <div className="mt-6">
                 <a
-                  href="https://claude.ai/artifacts/b3b42bfa-d075-4982-bf0f-990520c655da"
+                  href="https://claude.ai/artifacts/70cd6a35-de92-410f-990d-fc676d4f1811"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-lg bg-red-600 px-4 py-2 text-white font-medium shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
